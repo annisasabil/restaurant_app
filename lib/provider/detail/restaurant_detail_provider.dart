@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:restaurants_app/data/api/api_services.dart';
-import 'package:restaurants_app/data/model/restaurant_detail.dart';
 import 'package:restaurants_app/static/restaurant_detail_result_state.dart';
 
 class RestaurantDetailProvider extends ChangeNotifier{

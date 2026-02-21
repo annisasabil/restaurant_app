@@ -1,7 +1,6 @@
 class Restaurants {
   final String id;
   final String name;
-  final String description;
   final String pictureId;
   final String city;
   final num rating;
@@ -10,7 +9,6 @@ class Restaurants {
   Restaurants({
     required this.id,
     required this.name,
-    required this.description,
     required this.pictureId,
     required this.city,
     required this.rating,
@@ -21,7 +19,6 @@ class Restaurants {
       {
         "id": String id,
         "name": String name,
-        "description": String description,
         "pictureId": String pictureId,
         "city": String city,
         "rating": num rating,
@@ -29,12 +26,21 @@ class Restaurants {
         Restaurants(
           id: id, 
           name: name, 
-          description: description, 
           pictureId: pictureId, 
           city: city, 
           rating: rating,
         ),
       _ => throw const FormatException('Failed to load restaurant data.'),
+    };
+  }
+
+  Map<String, dynamic> toJson(){
+    return <String, dynamic>{
+      "id": id, 
+      "name": name, 
+      "pictureId": pictureId, 
+      "city": city, 
+      "rating": rating,
     };
   }
 }

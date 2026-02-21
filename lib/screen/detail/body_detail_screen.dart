@@ -26,6 +26,9 @@ class BodyDetailScreen extends StatelessWidget{
                 height: 220,
                 width: double.infinity,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace){
+                  return Icon(Icons.image_not_supported);
+                }
               ),
             ),
 
